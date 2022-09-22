@@ -25,3 +25,5 @@ a {
     background: black;
   }
 }
+/* styles/globals.css */
+@import '~@douyinfe/semi-ui/dist/css/semi.min.css';
