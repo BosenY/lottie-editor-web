@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from 'react'
+
+import React, { useState } from 'react'
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import { Layout, Button, Upload } from '@douyinfe/semi-ui'
 import axios from 'axios';
 import styles from './style.module.css'
 const Editor = () => {
-    useEffect(() => {
-        axios.get('/api/hello').then(rs => {
-            console.log(rs.data)
-        })
-    }, [])
     const [lottieJson, setLottieJson] = useState(null)
     const mockRequest = ({ file, fileInstance, onProgress, onError, onSuccess }) => {
         console.log(fileInstance)
