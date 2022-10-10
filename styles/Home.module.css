@@ -2,10 +2,6 @@
   box-sizing: border-box;
   position: relative;
   text-align: center;
-  margin: 60px;
-  border-radius: 5px 5px 0 0;
-  box-shadow: var(--semi-shadow-elevated);
-  color: var(--semi-color-text-1);
 }
 .header, .footer {
   box-sizing: border-box;
@@ -13,10 +9,21 @@
   line-height: 64px;
   padding-left: 50px;
   padding-right: 50px;
-  background: var(--semi-color-fill-0);
+  background: rgba(var(--semi-grey-1), 1);
+  color: rgba(var(--semi-grey-9), 1);
 }
 .sider {
   box-sizing: border-box;
-  width: 120px;
-  background: var(--semi-color-fill-2);
+  width: 300px;
+  background: rgba(var(--semi-grey-2), 1);
+  color: rgba(var(--semi-grey-9), 1);
+}
+.center {
+  height: calc(100vh - 128px);
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

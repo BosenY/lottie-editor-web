@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Editor from '../components/Editor'
 import { Layout, Button, Upload } from '@douyinfe/semi-ui';
+import SwitchMode from '../components/SwitchMode';
 import styles from '../styles/Home.module.css'
 export default function Home() {
   const { Header, Footer, Sider, Content } = Layout;
@@ -14,10 +15,12 @@ export default function Home() {
 
       </Head>
       <Layout className={styles.layout}>
-        <Header className={styles.header}>Header</Header>
-        <Layout>
+        <Header className={styles.header}>
+          <SwitchMode />
+        </Header>
+        <Layout className={styles.center}>
           <Sider className={styles.sider}>Sider</Sider>
-          <Content>
+          <Content className={styles.content}>
             <Editor></Editor>
           </Content>
           <Sider className={styles.sider}>Sider</Sider>
