@@ -21,7 +21,7 @@ const LeftSider = () => {
                 className={styles.listItem}
                     main={
                     <>
-                            <div>
+                            <div className={styles.previewImgContainer}>
                                 <img className={styles.previewImg} src={item.p} alt={item.id} />
                             </div>
 

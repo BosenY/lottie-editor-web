@@ -12,10 +12,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: none;
+}
+.previewImgContainer {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--semi-color-border);
 }
 .previewImg {
     display: block;
     margin: auto;
-    width: 150px;
+    width: 90%;
     object-fit: contain;
+
 }

@@ -20,7 +20,7 @@
 }
 .sider {
   box-sizing: border-box;
-  width: 25vw;
+  width: 200px;
   background: var( --semi-color-bg-1);
   color: rgba(var(--semi-grey-9), 1);
 }
