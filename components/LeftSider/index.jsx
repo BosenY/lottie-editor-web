@@ -13,7 +13,7 @@ const LeftSider = () => {
     }, [lottieConfig])
     return <div className={styles.leftSider}>
         <List
-
+            className={styles.list}
             dataSource={assets}
             layout="vertical"
             renderItem={item => (
