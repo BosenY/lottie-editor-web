@@ -1,6 +1,6 @@
 
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import { Layout, Button, Upload } from '@douyinfe/semi-ui'
 import axios from 'axios';
@@ -15,6 +15,7 @@ const Editor = () => {
             json: lottieJson
         })
     }, [lottieJson])
+    const RealLottieJson = useMemo(() => lottieJson, [lottieJson])
     const mockRequest = ({ file, fileInstance, onProgress, onError, onSuccess }) => {
         console.log(fileInstance)
         if(fileInstance.type.indexOf('json') > -1) {
@@ -55,15 +56,15 @@ const Editor = () => {
                 action=""
                 customRequest={mockRequest}
                 draggable={true}
-                dragMainText={'点击上传文件或拖拽文件到这里'}
-                dragSubText="支持zip/json"
+                dragMainText={'点击上传Lottie文件或拖拽文件到这里'}
+                dragSubText="支持zip/json格式的lottie"
                 fileList={[]}
                 accept="application/json,.zip"
             ></Upload> :
                 <Player
                     autoplay
                     loop
-                    src={lottieJson}
+                    src={RealLottieJson}
                 >
                     <Controls visible={true} buttons={['play', 'repeat', 'frame', 'debug']} />
                 </Player>}

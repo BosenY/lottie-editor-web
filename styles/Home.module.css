@@ -25,7 +25,7 @@
   color: rgba(var(--semi-grey-9), 1);
 }
 .center {
-  height: calc(100vh - 130px);
+  height: calc(100vh - 128px);
 
 }
 .content {

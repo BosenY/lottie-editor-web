@@ -11,7 +11,6 @@ import { lottieConfigState } from '../../atoms/lottieConfig';
 const ExportJson = () => {
     const [lottieConfig, setlottieConfig] = useRecoilState(lottieConfigState)
     const exportLottieJson = () => {
-        console.log(lottieConfig)
         if(lottieConfig.json) {
             exportFromJSON({
                 data: lottieConfig.json,
