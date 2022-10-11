@@ -1,7 +1,7 @@
 
 import React from 'react';
 import styles from './style.module.scss';
-import { Button } from '@douyinfe/semi-ui';
+import { Button, Toast } from '@douyinfe/semi-ui';
 import { IconGithubLogo } from '@douyinfe/semi-icons';
 import SwitchMode from '../SwitchMode';
 import exportFromJSON from 'export-from-json'
@@ -17,6 +17,8 @@ const ExportJson = () => {
                 fileName: 'lottie',
                 exportType: exportFromJSON.types.json
             })
+        }else {
+            Toast.warning('请上传Lottie资源再导出')
         }
     }
     return <Button onClick={exportLottieJson} style={{marginRight: '30px'}}>Export Json</Button>
