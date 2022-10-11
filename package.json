@@ -18,7 +18,8 @@
     "next": "12.3.1",
     "next-connect": "^0.13.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "recoil": "^0.7.5"
   },
   "devDependencies": {
     "@douyinfe/semi-next": "^2.19.0",

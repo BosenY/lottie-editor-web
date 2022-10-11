@@ -9,20 +9,30 @@
   line-height: 64px;
   padding-left: 50px;
   padding-right: 50px;
-  background: rgba(var(--semi-grey-1), 1);
+  background: var( --semi-color-bg-0);
   color: rgba(var(--semi-grey-9), 1);
+}
+.header {
+  border-bottom: 1px solid var(--semi-color-border);
+}
+.footer {
+  border-top: 1px solid var(--semi-color-border);
 }
 .sider {
   box-sizing: border-box;
-  width: 300px;
-  background: rgba(var(--semi-grey-2), 1);
+  width: 25vw;
+  background: var( --semi-color-bg-0);
   color: rgba(var(--semi-grey-9), 1);
 }
 .center {
-  height: calc(100vh - 128px);
+  height: calc(100vh - 130px);
+
 }
 .content {
   display: flex;
+  background: var( --semi-color-bg-0);
+  border-left: 1px solid var(--semi-color-border);
+  border-right: 1px solid var(--semi-color-border);
   align-items: center;
   justify-content: center;
   flex-direction: column;

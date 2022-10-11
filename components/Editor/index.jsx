@@ -1,3 +1,11 @@
+/*
+ * @Author: yxy245652 yxy245652@antfin.com
+ * @Date: 2022-09-22 11:05:44
+ * @LastEditors: yxy245652 yxy245652@antfin.com
+ * @LastEditTime: 2022-10-11 11:47:38
+ * @FilePath: /lottie-editor-web/components/Editor/index.jsx
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 
 import React, { useState } from 'react'
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
@@ -56,7 +64,7 @@ const Editor = () => {
                     loop
                     showUploadList={false}
                     src={lottieJson}
-                    style={{ height: '300px', width: '300px' }}
+                    // style={{ height: '300px', width: '300px' }}
                 >
                     <Controls visible={true} buttons={['play', 'repeat', 'frame', 'debug']} />
                 </Player>}
