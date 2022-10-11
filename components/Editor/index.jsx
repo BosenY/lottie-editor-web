@@ -1,19 +1,20 @@
-/*
- * @Author: yxy245652 yxy245652@antfin.com
- * @Date: 2022-09-22 11:05:44
- * @LastEditors: yxy245652 yxy245652@antfin.com
- * @LastEditTime: 2022-10-11 11:47:38
- * @FilePath: /lottie-editor-web/components/Editor/index.jsx
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
 
-import React, { useState } from 'react'
+
+import React, { useState, useEffect } from 'react'
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import { Layout, Button, Upload } from '@douyinfe/semi-ui'
 import axios from 'axios';
 import styles from './style.module.css'
+import { useRecoilState } from 'recoil';
+import { lottieConfigState } from '../../atoms/lottieConfig';
 const Editor = () => {
     const [lottieJson, setLottieJson] = useState(null)
+    const [lottieConfig, setLottieConfig] = useRecoilState(lottieConfigState)
+    useEffect(() => {
+        setLottieConfig({
+            json: lottieJson
+        })
+    }, [lottieJson])
     const mockRequest = ({ file, fileInstance, onProgress, onError, onSuccess }) => {
         console.log(fileInstance)
         if(fileInstance.type.indexOf('json') > -1) {
@@ -62,9 +63,7 @@ const Editor = () => {
                 <Player
                     autoplay
                     loop
-                    showUploadList={false}
                     src={lottieJson}
-                    // style={{ height: '300px', width: '300px' }}
                 >
                     <Controls visible={true} buttons={['play', 'repeat', 'frame', 'debug']} />
                 </Player>}

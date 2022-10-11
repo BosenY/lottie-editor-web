@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.logo {
+  height: 64px;
+}
+.logo-title {
+  margin: 0;
+  padding: 0;
+  height: 64px;
+  line-height: 64px;
+}
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.headerCenter {
+  flex: 1;
+}

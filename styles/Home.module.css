@@ -9,7 +9,7 @@
   line-height: 64px;
   padding-left: 50px;
   padding-right: 50px;
-  background: var( --semi-color-bg-0);
+  background: var( --semi-color-bg-1);
   color: rgba(var(--semi-grey-9), 1);
 }
 .header {
@@ -21,7 +21,7 @@
 .sider {
   box-sizing: border-box;
   width: 25vw;
-  background: var( --semi-color-bg-0);
+  background: var( --semi-color-bg-1);
   color: rgba(var(--semi-grey-9), 1);
 }
 .center {
@@ -30,7 +30,7 @@
 }
 .content {
   display: flex;
-  background: var( --semi-color-bg-0);
+  background: var( --semi-color-bg-1);
   border-left: 1px solid var(--semi-color-border);
   border-right: 1px solid var(--semi-color-border);
   align-items: center;
